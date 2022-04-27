@@ -1,4 +1,4 @@
-import { AuthenticateClientUseCase } from "../authenticateClient/AuthenticateClientUseCase";
+import { AuthenticateClientUseCase } from "./AuthenticateClientUseCase";
 import { Request, Response } from "express";
 
 export class AuthenticateClientController {

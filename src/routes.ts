@@ -1,4 +1,4 @@
-import { AuthenticateClientController } from "./modules/account/authenticateClient/AuthenticateUserController";
+import { AuthenticateClientController } from "./modules/account/authenticateClient/AuthenticateClientController";
 import { Router } from "express";
 import { CreateClientController } from "./modules/clients/useCases/createClient/CreateClientController";
 
