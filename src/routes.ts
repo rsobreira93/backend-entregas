@@ -4,6 +4,7 @@ import { Router } from "express";
 import { CreateClientController } from "./modules/clients/useCases/createClient/CreateClientController";
 import { CreateDeliverymanController } from "./modules/deleveyman/useCases/createDeliveryman/CreateDeliverymanController";
 import { CreateDeliveryController } from "./modules/deliveries/useCases/createDelivery/CreateDeliveryController";
+import { ensureAuthenticateClient } from "./middlewares/ensureAuthenticateClient";
 
 const routes = Router();
 
@@ -23,6 +24,10 @@ routes.post(
 routes.post("/client", createClientController.handle);
 routes.post("/deliveryman", createDeliverymanController.handle);
 
-routes.post("/delivery", createDeliveryController.handle);
+routes.post(
+  "/delivery",
+  ensureAuthenticateClient,
+  createDeliveryController.handle
+);
 
 export { routes };
