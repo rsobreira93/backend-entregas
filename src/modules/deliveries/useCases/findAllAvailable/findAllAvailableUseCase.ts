@@ -5,6 +5,7 @@ export class FindAllAvailableUseCase {
     const deliveries = prisma.deliveries.findMany({
       where: {
         end_at: null,
+        id_deliveryman: null,
       },
     });
 
