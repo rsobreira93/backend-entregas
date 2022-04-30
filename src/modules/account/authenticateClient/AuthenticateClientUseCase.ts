@@ -27,7 +27,7 @@ export class AuthenticateClientUseCase {
       throw new Error("username or password incorrect");
     }
 
-    const token = sign({ username }, "dea12ffb2578f2789b8bde3d446f3415", {
+    const token = sign({ username }, "eea12ffb2578f2789b8bde3d446f3415", {
       subject: client.id,
       expiresIn: "1d",
     });

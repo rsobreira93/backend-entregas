@@ -21,7 +21,7 @@ export async function ensureAuthenticateClient(
   try {
     const { sub } = verify(
       token,
-      "dea12ffb2578f2789b8bde3d446f3415"
+      "eea12ffb2578f2789b8bde3d446f3415"
     ) as IPayload;
 
     request.id_client = sub;
