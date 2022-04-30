@@ -1,4 +1,4 @@
-import { FindAllDeliveriesDeliverymanUseCase } from "./FindaAllDeliveriesDeliverymanUseCase";
+import { FindAllDeliveriesDeliverymanUseCase } from "./FindAllDeliveriesDeliverymanUseCase";
 import { Request, Response } from "express";
 
 export class FindAllDeliveriesDeliverymanController {
