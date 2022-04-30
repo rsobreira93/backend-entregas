@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from "express";
+import { NextFunction, Request, Response } from "express";
 import { verify } from "jsonwebtoken";
 
 interface IPayload {
@@ -21,14 +21,13 @@ export async function ensureAuthenticateDeliveryman(
   try {
     const { sub } = verify(
       token,
-      "dea12ffb2578f2789b8bde3d446f3415"
+      "dea12ffb2578f7789b8bde3d446f3415"
     ) as IPayload;
 
     request.id_deliveryman = sub;
 
     return next();
-  } catch (error) {
-    console.log(error);
-    return response.status(401).json({ message: "Invalid token!" });
+  } catch (err) {
+    return response.status(401).json({ message: "Token invalid" });
   }
 }
